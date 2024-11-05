@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 442px 679px;
+  grid-template-rows: 24px 390px 47px;
+  row-gap: 45px;
+  column-gap: 50px;
+  grid-template-areas: ". nav-top" "section image-block" "nav-bottom image-block";
+}
+.main .nav-top {
+  grid-area: nav-top;
+  /* display: grid; 
+  grid-template-columns: repeat(3, auto); 
+  justify-content: space-between; */
+  display: flex;
+  position: absolute;
+  column-gap: 25px;
+  row-gap: 6px;
+  text-align: center;
+  width: 679px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+}
+.main .nav-top .nav-top_link {
+  text-transform: uppercase;
+  list-style-type: none;
+  width: auto;
+  font-family: Yeseva One;
+  color: rgba(255, 255, 255, 0.3019607843);
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+.main .nav-top .link_active {
+  color: #E3B873;
+  border-bottom: solid 1px #E3B873;
+}
+.main .section {
+  grid-area: section;
+  color: #FFFFFF;
+}
+.main .section h2, .main .section h3 {
+  text-transform: uppercase;
+  color: #E3B873;
+  font-family: Yeseva One;
+}
+.main .section h3 {
+  margin: 0 auto 9px;
+}
+.main .section span {
+  font-family: Nunito Sans;
+  font-size: 13px;
+  line-height: 22px;
+}
+.main .section .title {
+  display: flex;
+  position: relative;
+  width: 253px;
+}
+.main .section .title .title_text {
+  font-size: 27px;
+  line-height: 38px;
+  height: 66px;
+  margin: 0 auto;
+}
+.main .section .title .title_line {
+  display: block;
+  position: absolute;
+  width: 92px;
+  height: 10px;
+  right: 0;
+  bottom: 0;
+  border-top: solid 1.5px #E3B873;
+}
+.main .section .info-block {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 29px;
+  row-gap: 34px;
+}
+.main .section .info-block .info-block__text {
+  display: flex;
+  flex-direction: column;
+  font-family: Nunito Sans;
+  font-size: 13px;
+  line-height: 27px;
+  margin: 0 auto;
+}
+.main .section .descrip {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  line-height: 27px;
+  margin: 34px auto 42px;
+}
+.main .image-block {
+  grid-area: image-block;
+  width: 679px;
+  height: 482px;
+}
+.main .image-block .image {
+  width: 100%;
+  max-height: 100%;
+}
+.main .nav-bottom {
+  grid-area: nav-bottom;
+  position: absolute;
+  display: flex;
+  height: 18px;
+  bottom: 0;
+}
+.main .nav-bottom .arrow {
+  bottom: 0;
+  cursor: pointer;
+}
+.main .nav-bottom .point-block {
+  position: relative;
+  display: flex;
+  column-gap: 18px;
+  height: 18px;
+  margin: 0 27px;
+  bottom: 2px;
+}
+.main .nav-bottom .point-block .point {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
