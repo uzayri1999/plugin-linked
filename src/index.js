@@ -69,7 +69,7 @@ const urlPointFill = 'src/img/point_fill.svg';
 
 /* ОПРЕДЕЛЕНИЕ КОЛ-ВА ЭЛЕМЕНТОВ, УСТАНОВКА ТОЧЕК В НИЖНЕЙ 
 ППАНЕЛИ НАВИГАЦИИ И ССЫЛОК В ВЕРХНЕЙ ПАНЕЛИ НАВИГАЦИИ */
-for (i = 0; i < nameList.length; i ++ ) {
+for (let i = 0; i < nameList.length; i ++ ) {
   const elemSpan = document.createElement ('span');
   navTop.appendChild (elemSpan);
   elemSpan.classList.add ('nav-top_link');
@@ -127,7 +127,7 @@ function slideLeft () {
 
 // ПРОВЕРКА ТЕКУЩЕЙ СТРАНИЦЫ
 function startSlider () {
-  for (i = 0; i < navLink.length; i ++ ) {
+  for (let i = 0; i < navLink.length; i ++ ) {
     if (navLink[i].classList.contains ('link_active')) {
       addInfo (i);
     };
@@ -144,7 +144,7 @@ function addInfo (x) {
   const repairTime = document.getElementById ('repair-time');
   const repairCost = document.getElementById ('repair-cost');
 
-  for (i = 0; i < cityList.length; i ++ ) {
+  for (let i = 0; i < cityList.length; i ++ ) {
     cityList[i].textContent = nameList[x].CITY[i];
   };
   apartmentArea.textContent = nameList[x].APARTMENT_AREA;
@@ -155,7 +155,7 @@ function addInfo (x) {
   image.src = nameList[x].url_image;
 
   // ЗАЛИВКА ТОЧЕК ВНИЗУ
-  for (i = 0; i < pointList.length; i ++ ) {
+  for (let i = 0; i < pointList.length; i ++ ) {
     const point = pointList[i].querySelector ('img');
     const pointFill = pointList[x].querySelector ('img');
     if (pointList[i].classList.contains ('point_active')) {
@@ -172,7 +172,7 @@ let index = 0;
 const pageCount = navLink.length;
 
 function navigationArrow (operand) {
-  for (i = 0; i < navLink.length; i ++ ) {
+  for (let i = 0; i < navLink.length; i ++ ) {
     if (navLink[i].classList.contains ('link_active')) {
       navLink[i].classList.remove ('link_active');
       index = i;

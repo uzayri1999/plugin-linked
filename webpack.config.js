@@ -21,7 +21,7 @@ module.exports = {
 
     optimization: {
         minimizer: [
-          `...`,
+          '...',
           new CssMinimizerPlugin()
         ],
       },
@@ -29,6 +29,10 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin(),
         new CssMinimizerPlugin(),
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin(
+            {
+                template: path.resolve(__dirname, '.index.html')
+            }
+        )
     ]
-}
+};
